@@ -1,4 +1,7 @@
 language: java
+dist: xenial
+sudo: required
+
 jdk: oraclejdk12
 
 script: mvn -e verify
