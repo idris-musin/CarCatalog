@@ -16,6 +16,9 @@ public class Catalog {
         cars.add(new Car("Volkswagen", "Polo", 2010, 400_000));
         cars.add(new Car("Hyundai", "IX35", 2015, 1_300_000));
 
+        Collections.sort(cars);
+        System.out.println(cars);
+
         Collections.sort(cars, new YearAscComparator());
         System.out.println(cars);
 
@@ -69,7 +72,7 @@ class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car o) {
-        return 0;
+        return brend.compareTo(o.brend);
     }
 }
 
